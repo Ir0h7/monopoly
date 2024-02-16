@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Open Sans', tahoma, arial, sans-serif;
+    background-color: #f4f4f5;
+    color: #5b5d67;
+    min-height: 100%;
+    padding: 15px 0 15px 100px !important;
+}
+
+.header {
+    background: #fff;
+    width: 75px;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+}
+
+.widther {
+    flex-flow: column nowrap;
+    height: 100% !important;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    height: 75px;
+    fill: #7e8692 !important
+}
+
+.ion-log-in-link {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 30px;
+    border-bottom: unset !important;
+    color: unset !important;
+}
+
+.ion-information-circled-link {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 30px;
+    border-bottom: unset !important;
+    color: unset !important;
+}
+
+.index-bigboard {
+    margin-top: -75px;
+    margin-bottom: 175px;
+    padding-top: 100px;
+    height: 750px;
+    /*background: url(back.jpg) center no-repeat;*/
+    background-color: #37bc9d;
+    background-size: cover;
+}
+
+.widther {
+    width: unset !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.index-bigboard-top {
+    padding-top: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+.index-bigboard-top-title {
+    font: 700 3.5em Montserrat;
+}
+
+.index-bigboard-top-text {
+    margin-top: 0.7em;
+    font: 600 1.32em/1.4em Montserrat;
+}
+
+.index-bigboard-action {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+    border-radius: 5px;
+    padding: 0 0.9em;
+    height: 2.1em;
+    background-color: #fff;
+    font: 600 21px Montserrat;
+    color: #5b5d67;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    will-change: opacity;
+    transition: 150ms;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.index-bigboard-picture {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: 562px;
+}
+
+.index-bigboard-picture picture {
+    box-shadow: 0 0 100px rgba(0,0,0,.33);
+    border-radius: 5px;
+    width: 900px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.index-break {
+    padding-top: 0.1px;
+}
+
+.index-title {
+    margin: 1.25em 0;
+    font: 700 3.25em Montserrat;
+    color: #26272b;
+    text-align: center;
+}
+
+.index-features {
+    display: grid;
+    align-items: normal;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 4rem 2rem;
+}
+
+.index-features-one {
+    top: 0px;
+}
+
+.index-features-one-image {
+    height: 175px;
+    background: left center/contain no-repeat;
+}
+
+.index-features-one-image[data-image=okay] {
+    background-image: url(/static/images/okay.svg);
+}
+
+.index-features-one-image[data-image=dices] {
+    background-image: url(/static/images/dices.svg)
+}
+
+.index-features-one-image[data-image=cup] {
+    background-image: url(/static/images/cup.svg)
+}
+
+.index-features-one-image[data-image=rating-positive] {
+    background-image: url(/static/images/rating-positive.svg)
+}
+
+.index-features-one-image[data-image=delivery] {
+    background-image: url(/static/images/delivery.svg)
+}
+
+.index-features-one-image[data-image=planet] {
+    background-image: url(/static/images/planet.svg)
+}
+
+.index-features-one-text {
+    margin-top: 1.5em;
+}
+
+.index-features-one-text h4 {
+    margin: 0 0 0.4em;
+    font: 700 2em Montserrat;
+    color: #26272b;
+}
+
+.index-features-one-text div {
+    margin-top: 0.5em;
+    font-size: 1.1em;
+}
+
+.index-bottom {
+    margin: 3.75em 0;
+    text-align: center;
+}
+
+.btn-bottom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+    border-radius: 5px;
+    padding: 0 0.9em;
+    height: 2.1em;
+    background-color: rgba(55,188,157,0.85);
+    font: 600 1rem Montserrat;
+    color: #fff;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    font-size: 21px;
+    transition: 150ms;
+}
+
+.btn-bottom:hover {
+    background-color: #37bc9d;
+}

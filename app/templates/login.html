@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<head>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+    <div class="widther-auth">
+        <div class="block">
+            <div class="auth">
+                <div class="auth-title">Авторизация</div>
+                <p>Авторизуйтесь при помощи логина и пароля от вашего аккаунта на Monopoly&nbsp;One.</p>
+                <div class="paragraph">
+                    <form class="form2" method="post" action="{{ url_for('main.login') }}" id="auth-form">
+                        {{ form.hidden_tag() }}
+                        <div class="form2-row">
+                            <label class="form2-label">Логин</label>
+                            <input class="form-input" type="username" name="username" id="auth-form-username" placeholder="vova" autocapitalize="false">
+                        </div>
+                        <div class="form2-row">
+                            <label class="form2-label">Пароль</label>
+                            <input class="form-input" type="password" name="password" id="auth-form-password" placeholder="••••••••••" autocapitalize="false">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" name="remember_me" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Запомнить меня</label>
+                        </div>
+                        <div class="form2-row">
+                            <input class="btn-login" type="submit" name="submit" value="Войти">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-text">Copyright © 2024 Monopoly. All rights reserved.</div>
+    </div>
+</body>
+{% endblock %}

@@ -103,3 +103,7 @@ input:focus {
     text-align: center;
     bottom: 15px;
 }
+
+.form-check {
+    margin-top: 10px;
+}

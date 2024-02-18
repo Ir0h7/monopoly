@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="../static/images/logo_500_gray.png" rel="shortcut icon" type="image/png">
     <title>Monopoly One</title>
 </head>
     <div class="header" style="top: 0px;">
@@ -20,16 +21,60 @@
                 </svg>
             </a>
             {% if current_user.is_anonymous %}
-                <a href="{{ url_for('main.login') }}" class="ion-log-in-link">
+                <a href="{{ url_for('main.login') }}" class="header-link">
                     <div class="ion-log-in"></div>
                 </a>
-                <a href="" class="ion-information-circled-link">
+                <a href="" class="header-link">
                     <div class="ion-information-circled"></div>
                 </a>
             {% else %}
-                <a href="{{ url_for('main.logout') }}" class="ion-log-in-link">
-                    <div class="ion-log-in"></div>
+                <a href="" class="header-link">
+                    <div class="ion-ios-game-controller-b"></div>
                 </a>
+                <a href="" class="header-link">
+                    <div class="ion-bag"></div>
+                </a>
+                <a href="" class="header-link">
+                    <div class="ion-ios-people"></div>
+                </a>
+                <div class="HeaderUser">
+                    <div class="HeaderUser-menu">
+                        <a href="" class="HeaderUser-menu-user">
+                            <div class="HeaderUser-menu-user-info">
+                                <div class="HeaderUser-menu-user-info-nick">Владимир</div>
+                            </div>
+                        </a>
+                        <div class="HeaderUser-menu-separator"></div>
+                        <a href="" class="HeaderUser-menu-one">
+                            Обмены
+                        </a>
+                        <a href="" class="HeaderUser-menu-one">
+                            Кошелек
+                        </a>
+                        <a href="" class="HeaderUser-menu-one">
+                            Настройки
+                        </a>
+                        <div class="HeaderUser-menu-separator"></div>
+                        <a href="{{ url_for('main.logout') }}" class="HeaderUser-menu-one">
+                            Выйти
+                        </a>
+                    </div>
+                    <div class="HeaderUser-avatar" style="background-image: url('../static/images/tristan.jpeg')"></div>
+                </div>
+                <div class="header-user-new">
+                    <a href="" class="header-link">
+                        <div class="ion-shuffle"></div>
+                    </a>
+                    <a href="" class="header-link">
+                        <div class="ion-social-usd"></div>
+                    </a>
+                    <a href="" class="header-link">
+                        <div class="ion-gear-b"></div>
+                    </a>
+                    <a href="" class="header-link">
+                        <div class="ion-information-circled"></div>
+                    </a>
+                </div>
             {% endif %}
         </div>
     </div>

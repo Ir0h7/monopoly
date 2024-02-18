@@ -41,19 +41,7 @@ body {
     fill: #7e8692 !important
 }
 
-.ion-log-in-link {
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: 50px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 30px;
-    border-bottom: unset !important;
-    color: unset !important;
-}
-
-.ion-information-circled-link {
+.header-link {
     display: flex;
     align-items: center;
     position: relative;
@@ -229,4 +217,104 @@ body {
 
 .btn-bottom:hover {
     background-color: #37bc9d;
+}
+
+.HeaderUser {
+    margin-top: auto !important;
+    position: relative;
+    display: block;
+    margin: 17px 0;
+    border: none !important;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+
+.HeaderUser-menu {
+    display: none;
+    opacity: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    background-color: #fff;
+    right: -225px !important;
+    position: absolute;
+    top: -10px;
+    border-radius: 5px;
+    padding-bottom: 7px;
+    width: 225px;
+    cursor: default;
+    transition: 150ms;
+}
+
+.HeaderUser-menu-user {
+    display: block;
+    margin-bottom: -7px;
+    border: none !important;
+    padding: 10px 15px;
+    cursor: pointer;
+    overflow: hidden;
+    color: #5b5d67;
+}
+
+.HeaderUser-menu-user-info {
+    margin: 0 !important;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.HeaderUser-menu-user-info-nick {
+    height: 23px;
+    font-size: 15px;
+    line-height: 23px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.HeaderUser-menu-separator {
+    background-color: #e6e6e6;
+    margin: 7px 0;
+    height: 1px;
+}
+
+.HeaderUser-menu-one {
+    display: block;
+    border: none !important;
+    padding: 7px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #5b5d67;
+}
+
+.HeaderUser-menu-one:hover {
+    background-color: #a3cd75;
+    color: #fff;
+}
+
+.HeaderUser:hover .HeaderUser-menu {
+    display: block;
+    opacity: 1;
+}
+
+.HeaderUser-avatar {
+    position: relative !important;
+    right: 0 !important;
+    top: 0;
+    border-radius: 99999px;
+    width: 40px;
+    height: 40px;
+    background: center/cover;
+    pointer-events: none;
+}
+
+.header-user-new {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 20px;
+    z-index: 1;
+    flex-flow: column nowrap;
+    margin-bottom: 20px;
 }

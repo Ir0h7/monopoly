@@ -2,6 +2,9 @@
 #
 # bp = Blueprint("game", __name__)
 
-from app.game.fields import MonopolyField, CarField, UnbelievableXXXField
+from game_object import (
+    PurchasedField,
+    StartField, ChanceField, PrisonField, CasinoField, PoliceField, TaxField,
+    MonopolyField, CarField, UnbelievableXXXField,
+    Player)
 from app.game.game import Game
-from app.game.player import Player

@@ -2,7 +2,7 @@ from app.game import (
     StartField, ChanceField, PrisonField, CasinoField, PoliceField, TaxField,
     MonopolyField, CarField, UnbelievableXXXField, Player)
 
-field_types = {
+FIELD_TYPES = {
     'Start': StartField,
     'Chance': ChanceField,
     'Prison': PrisonField,
@@ -15,7 +15,7 @@ field_types = {
     'XXX': UnbelievableXXXField
 }
 
-labels = {
+LABELS = {
     'Start': tuple(['{} Получает {}, потому что остановился на стартовом поле']),
     'Chance': tuple(['{} хз']),
     'Prison': tuple(['{} Посещает тюрьму с визитом']),
@@ -37,16 +37,16 @@ labels = {
             '{} Посещает поле игрока {} и должен заплатить ему {}')
 }
 
-fields = (
-    ('Monopoly', None, 'Adidas', 1000, 600, 500, (60, 300, 900, 2700, 4000, 5500), 500, 0),
-    ('Monopoly', None, 'Puma', 1000, 600, 500, (60, 300, 900, 2700, 4000, 5500), 500, 0),
-    ('Monopoly', None, 'Lacoste', 1200, 720, 600, (80, 400, 1000, 3000, 4500, 6000), 500, 0),
-    ('Monopoly', None, 'Вконтакте', 1400, 840, 700, (100, 500, 1500, 3500, 6250, 7500), 750, 1),
-    ('Monopoly', None, 'Facebook', 1400, 840, 700, (100, 500, 1500, 3500, 6250, 7500), 750, 1),
-    ('Monopoly', None, 'Twitter', 1600, 960, 800, (120, 600, 1800, 5000, 7000, 9000), 750, 1)
+FIELDS = (
+    ('Monopoly', None, 'Adidas', 1000, 600, 500, (60, 300, 900, 2700, 4000, 5500), 500, 0, 3),
+    ('Monopoly', None, 'Puma', 1000, 600, 500, (60, 300, 900, 2700, 4000, 5500), 500, 0, 3),
+    ('Monopoly', None, 'Lacoste', 1200, 720, 600, (80, 400, 1000, 3000, 4500, 6000), 500, 0, 3),
+    ('Monopoly', None, 'Вконтакте', 1400, 840, 700, (100, 500, 1500, 3500, 6250, 7500), 750, 1, 3),
+    ('Monopoly', None, 'Facebook', 1400, 840, 700, (100, 500, 1500, 3500, 6250, 7500), 750, 1, 3),
+    ('Monopoly', None, 'Twitter', 1600, 960, 800, (120, 600, 1800, 5000, 7000, 9000), 750, 1, 3)
 )
 
-move_types = {
+MOVE_TYPES = {
     'roll': Player.move,
     'purchase': Player.purchase_field,
     'pledge': Player.pledge_field,

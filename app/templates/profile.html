@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<head>
+    <link rel="stylesheet" href="/static/css/profile.css">
+</head>
+<body>
+    <div class="profile">
+        <div class="profile-top">
+            <div class="profile-top-info">
+                <div class="profile-top-info-avatar">
+                    <div class="profile-top-info-avatar-image"></div>
+                </div>
+                <div class="profile-top-info-main">
+                    <div class="profile-top-info-main-nick">
+                        <span class="_nick">Владимир</span>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-top-stat">
+                <div class="profile-top-stat-actions"></div>
+                <div class="profile-top-stat-list">
+                    <div class="profile-top-stat-list-one">
+                        <div class="_val">0</div>
+                        <div class="_key">матчей</div>
+                    </div>
+                    <div class="profile-top-stat-list-one">
+                        <div class="_val">0</div>
+                        <div class="_key">побед</div>
+                    </div>
+                    <div class="profile-top-stat-list-one">
+                        <div class="_val">0</div>
+                        <div class="_key">% побед</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widther profile-body">
+            <div class="col">
+                <div class="profile-body-inventory">
+                    <div class="title-3">
+                        Инвентарь
+                        <span class="title-counter">0</span>
+                        <a href="" class="title-button button button-small">все</a>
+                    </div>
+                    <div class="profile-body-inventory-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

@@ -1,10 +1,15 @@
-# from flask import Blueprint
-#
-# bp = Blueprint("game", __name__)
-
-from game_object import (
-    PurchasedField,
-    StartField, ChanceField, PrisonField, CasinoField, PoliceField, TaxField,
-    MonopolyField, CarField, UnbelievableXXXField,
-    Player)
+from dice import Dice
+from field import Field
+from unpurchased_field import UnPurchasedField
+from purchased_field import PurchasedField
+from car_field import CarField
+from monopoly_field import MonopolyField
+from xxx_field import UnbelievableXXXField
+from casino_field import CasinoField
+from tax_filed import TaxField
+from start_field import StartField
+from chance_field import ChanceField
+from police_field import PoliceField
+from prizon_field import PrisonField
+from player import Player
 from app.game.game import Game

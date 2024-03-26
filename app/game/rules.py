@@ -1,6 +1,19 @@
+import inspect
+import sys
 from app.game import (
     StartField, ChanceField, PrisonField, CasinoField, PoliceField, TaxField,
-    MonopolyField, CarField, UnbelievableXXXField, Player)
+    MonopolyField, CarField, UnbelievableXXXField)
+
+mod = dir()
+
+
+def get_methods_dict(cls, start: str = '', end: str = ''):
+    return {name.removeprefix(start).removesuffix(end): getattr(cls, name) for name in get_methods_list(cls, start, end)}
+
+
+def get_methods_list(cls, start: str = '', end: str = ''):
+    return [name for name in dir(cls) if name.startswith(start) and name.endswith(end) and callable(getattr(cls, name))]
+
 
 FIELD_TYPES = {
     'Start': StartField,
@@ -46,11 +59,11 @@ FIELDS = (
     ('Monopoly', None, 'Twitter', 1600, 960, 800, (120, 600, 1800, 5000, 7000, 9000), 750, 1, 3)
 )
 
-MOVE_TYPES = {
-    'roll': Player.move,
-    'purchase': Player.purchase_field,
-    'pledge': Player.pledge_field,
-    'redemption': Player.redemption_field,
-    'rent': 0,
-    'tax': 0
-}
+# MOVE_TYPES = {
+#     'roll': Player.move,
+#     'purchase': Player.purchase_field,
+#     'pledge': Player.pledge_field,
+#     'redemption': Player.redemption_field,
+#     'rent': 0,
+#     'tax': 0
+# }
